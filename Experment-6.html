@@ -35,7 +35,47 @@
             z-index: 1;
           
         }
-
+        .gallary {
+            width :70%;
+            height :200px;
+            border :none;
+            display :flex;
+            overflow-x: auto;
+            gap:0px;
+            margin-top:10px;
+            margin-bottom:50px;
+           
+            }
+            .gallary ::-webkit-scrollbar {
+               display :none;
+            }
+         .group {
+             display:flex;
+             align-items :center;
+             justify-content : center;
+             animation : spin 12s infinite linear;
+             gap: -80px;
+         }   
+        .pics {
+        flex : 0 0 4em;
+            height :2em;
+            padding:0em;
+            font-size:3rem;
+            border-radius:0.2em;
+            text-align :center;
+            align-content:center;
+            background:none;            
+            padding: 20px;
+                gap: 20px;
+                opacity: 0.9;
+            
+        }
+        @keyframes spin {
+            from {translate:0;}
+            to {translate: -100%}
+        }
+             
+         
         .video {
             width: 95%;
             height: 95%;
@@ -186,11 +226,11 @@
 
         
         .link {
-            width: clamp(150px, 50%, 400px);   
-            aspect-ratio: auto;               
+            width: clamp(180px, 40%, 450px);   
+            aspect-ratio: 16/9;               
             border: none;
             margin-top: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
         }
         
                @keyframes flicker {
@@ -210,13 +250,13 @@
             margin: 10px 0;
              }
       .gifs img {
-            opacity: 0.9;
+            opacity: 0.8;
             height: auto;
-            border-radius:10px;
+            border-radius:20px;
         }
 
-        .img-lain2 { width: 35%; aspect-ratio: auto; }
-        .img-lain1 { width: 35%; aspect-ratio: auto; }
+        .img-lain2 { width: 25%; aspect-ratio: auto; }
+        .img-lain1 { width: 25%; aspect-ratio: auto; }
         
         .dancing-lain2 {
             position : fixed; 
@@ -239,7 +279,7 @@
             border-radius:250px;
             }
       .me {
-          width:34%;
+          width:14%;
           height:35px;  
         }
          .sea {
@@ -253,6 +293,13 @@
             transition: 0.2s;
             margin-top:-15px;
         }
+            .Cat1 { width: 34%; aspect-ratio: 820/1440; }
+        .Cat2 { width: 51%; aspect-ratio: 1370/1600; }
+        .Cat3 { width: 60%; aspect-ratio: 1583/1600; }
+           .Cat4 { width: 60%; aspect-ratio: 1528/1528; }
+        .Cat5 { width: 60%; aspect-ratio: 1528/1528; }
+        .Cat6 { width: 60%; aspect-ratio: 1528/1528; } 
+            
      </style>
 </head>
 <body>
@@ -274,6 +321,26 @@
             <img class="img-chem1" src="2.jpg" alt="vial 1">
             <img class="img-chem2" src="1.jpg" alt="vial 2">
             <img class="img-chem3" src="3.jpg" alt="vial 3">
+        </div>
+        <div class="gallary">
+        <div class="group">
+        <div class="pics"><img class="Cat1" src="Cat1.jpg"></div>  
+        <div class="pics"><img class="Cat2" src="Cat2.jpg"></div>  
+        <div class="pics"><img class="Cat3" src="Cat3.jpg"></div>
+        <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
+        <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
+        <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
+            
+        </div>  
+         <div aria-hidden class="group">
+        <div class="pics"><img class="Cat1" src="Cat1.jpg"></div>  
+        <div class="pics"><img class="Cat2" src="Cat2.jpg"></div>  
+        <div class="pics"><img class="Cat3" src="Cat3.jpg"></div>
+        <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
+        <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
+        <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
+            
+        </div>      
         </div>
 <div>
         <a href="https://youtu.be/shqqUyhbWoI?si=NYHdLpUCL3IP41Ml" target="_blank">
@@ -299,7 +366,7 @@
             <p>من يسكن البحر ويحبه الناس ؟</p>
        </div> 
        
-      <a href="https://al-azophi.github.io/Yappier-/Experment-6-sea.html" target="_blank" class="sea">
+      <a href="Yappier-/Experment-6-sea.html" target="_blank" class="sea">
             <button class="sea">البحر</button>
         </a>
              
@@ -314,7 +381,7 @@
             Codyslab Uranium Refining
         </a>
 <div>
-        <iframe class="link" src="3.mp4" ></iframe>
+        <iframe class="link" src="https://drive.google.com/file/d/1dr0kIdPkFjYexq18ikimSPYccLrdFj99/preview"></iframe>
     </div>
     <div class="gifs">
             <img class="img-lain1" src="eren-eren-yeager.gif">
@@ -331,4 +398,4 @@
     document.querySelector('video').playbackRate = 0.5;
     </script>
 </body>
-</html>
+    </html>
