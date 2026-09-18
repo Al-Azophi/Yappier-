@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serial Experiments Ayash</title>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Bungee&family=Michroma&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
     {
@@ -18,7 +23,7 @@
             height: 100%;
             overflow-x: hidden;
             background-color: black;
-             font-family: 'DotGothic16', sans-serif;
+             font-family: "Aref Ruqaa", serif;
             
         }
 
@@ -35,7 +40,47 @@
             z-index: 1;
           
         }
-
+        .gallary {
+            width:350px;
+            height :200px;
+            border :none;
+            display :flex;
+            overflow-x: auto;
+            gap:0px;
+            margin-top:-10px;
+            margin-bottom:50px;
+           
+            }
+            .gallary ::-webkit-scrollbar {
+               display :none;
+            }
+         .group {
+             display:flex;
+             align-items :center;
+             justify-content : center;
+             animation : spin 8s infinite linear;
+             gap: -80px;
+         }   
+        .pics {
+        flex : 0 0 4em;
+            height :1em;
+            padding:0em;
+            font-size:2rem;
+            border-radius:0.2em;
+            text-align :center;
+            align-content:center;
+            background:none;            
+            padding: 20px;
+                gap: 20px;
+                opacity: 0.9;
+            
+        }
+        @keyframes spin {
+            from {translate:0;}
+            to {translate: -100%}
+        }
+             
+         
         .video {
             width: 95%;
             height: 95%;
@@ -58,21 +103,14 @@
         }
 
         /* Typography Styling */
-        .overlay-text {
-            color: red;
-            font-size: clamp(0.8rem, 2.6vw, 3rem);
-            animation: flicker 2s infinite;
-            margin-top: 10px;
-            white-space: nowrap;
-            opacity:0;
-        }
-
-        .qrn {
+            .qrn {
             color: orange;
-            font-size: clamp(1.2rem, 4.2vw, 2.1rem); 
-            margin-top:0px;
+            font-size: clamp(1.4rem, 4.2vw, 2.3rem); 
+            margin-top:15px;
             margin-bottom:50px;
             white-space: nowrap;
+            font-family: "Noto Nastaliq Urdu", serif;
+     
         }
 
         .hi {
@@ -153,15 +191,24 @@
 
         /* War Photo Container */
         .us-container {
-            width:clamp(300px, 100%, 400px);
-            max-width: 290px;
-            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            transform:translate(-50,-50);
+            align-items: flex-end;
+            gap:20px ; 
+            width:clamp(300px, 60%, 500px);
+            max-width: 500px;
+            margin: 15px 0;
+        
         }
         .us-container img {
-            width:clamp(180px, 100%, 240px);
-            aspect-ratio: 588/390;
-            opacity: 0.7;
+            opacity: 0.8;
+            height: auto;
+            border-radius:10px;
         }
+        .img2 { width: 20%; aspect-ratio: 238/313; }
+        .img1 { width: 40%; aspect-ratio: 588/390; }
+        .img3 { width: 40%; aspect-ratio: 1024/683; }
           
         /* Poetry & Anime Sections */
         .poetry-section {
@@ -172,6 +219,7 @@
             gap: 0px;
             margin:10px 10px;
             max-width: 700px;
+            font-family: "Aref Ruqaa", serif;
             
         }
         .poetry-section p { margin: 0; }
@@ -186,11 +234,11 @@
 
         
         .link {
-            width: clamp(180px, 40%, 450px);   
-            aspect-ratio: 16/9;               
+            width:50%;  
+            aspect-ratio: 496/496;               
             border: none;
             margin-top: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 70px;
         }
         
                @keyframes flicker {
@@ -199,19 +247,20 @@
             60% { opacity: 0.4; color: red; }
             80% { opacity: 0.2; color: red; }
         } 
-        .lain-dancing {
+        .gifs {
         position :absolute;
         bottom:20px;
             display:flex;
             justify-content: center;
             align-items: flex-end;
-            gap:clamp(10px, 70%, 500px); 
-           width: 70%;
-            margin: 10px 0;
+            gap:clamp(140px, 40%, 155px); 
+           width: 90%;
+            margin: 5px 0;
              }
-      .lain-dancing img {
-            opacity: 0.9;
+      .gifs img {
+            opacity: 0.8;
             height: auto;
+            border-radius:5px;
         }
 
         .img-lain2 { width: 25%; aspect-ratio: auto; }
@@ -230,17 +279,52 @@
         
         .discord {
             position:relative;
-            top:0%;
-            left:5%;
-            transform :translate(-50%, -50%) ;
-            aspect-ratio : auto;
+            bottom:0%;
+            right:0%;
+            aspect-ratio: auto;
             width:10%;
             border-radius:250px;
+            animation-name:test;
+            animation-duration:4s;
+            animation-timing-function:linear;
+            animation-iteration-count:infinite;
+            margin-bottom:14px;
+            }
+@keyframes test{
+ 0%{ transform: rotate(0deg);}  
+ 20%{ transform: rotate(72deg);} 
+ 40%{ transform: rotate(144deg);}   
+ 60%{ transform: rotate(216deg);}  
+ 80%{ transform: rotate(288deg);} 
+ 100%{ transform: rotate(360deg);}       
+}           
+      .me {
+          width:30%;
+          height:35px;  
+        }
+         .sea {
+            background-color: transparent;  
+            border-radius: 50px;
+            color: cyan;
+            font-size: clamp(1rem, 5vw, 1.5rem);
+            padding: 8px 12px;
+            cursor: pointer;            
+            font-family: "Aref Ruqaa", serif;
+            transition: 0.2s;
+            margin-top:-15px;
+        }
+            .Cat1 { width: 34%; aspect-ratio: 820/1440; }
+        .Cat2 { width: 51%; aspect-ratio: 1370/1600; }
+        .Cat3 { width: 60%; aspect-ratio: 1583/1600; }
+           .Cat4 { width: 60%; aspect-ratio: 1528/1528; }
+        .Cat5 { width: 60%; aspect-ratio: 1528/1528; }
+        .Cat6 { width: 60%; aspect-ratio: 1528/1528; } 
+    
+.map {
+aspect-ratio: auto;
+width:100px;    
+}
             
-        }
-       
-  
-        }
      </style>
 </head>
 <body>
@@ -252,8 +336,7 @@
     </div>
 
     <div class="main-wrapper">
-        <h1 class="overlay-text">No Matter Where You Are....Everyone Is Always connected</h1>
-        
+     
         <p class="qrn">《وَٱلنَّجۡمِ إِذَا هَوَىٰ مَا ضَلَّ صَاحِبُكُمۡ وَمَا غَوَىٰ》</p>
         
         <h3 class="hi">hiii...i'm Ayash</h3>
@@ -264,40 +347,84 @@
             <img class="img-chem2" src="1.jpg" alt="vial 2">
             <img class="img-chem3" src="3.jpg" alt="vial 3">
         </div>
-
+        <div class="gallary">
+        <div class="group">
+        <div class="pics"><img class="Cat1" src="Cat1.jpg"></div>  
+        <div class="pics"><img class="Cat2" src="Cat2.jpg"></div>  
+        <div class="pics"><img class="Cat3" src="Cat3.jpg"></div>
+        <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
+        <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
+        <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
+            
+        </div>  
+         <div aria-hidden class="group">
+        <div class="pics"><img class="Cat1" src="Cat1.jpg"></div>  
+        <div class="pics"><img class="Cat2" src="Cat2.jpg"></div>  
+        <div class="pics"><img class="Cat3" src="Cat3.jpg"></div>
+        <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
+        <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
+        <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
+            
+        </div>      
+        </div>
+<div>
         <a href="https://youtu.be/shqqUyhbWoI?si=NYHdLpUCL3IP41Ml" target="_blank">
             <button class="lain">Connect</button>
         </a>
+        </div>
          <div class="row-details">   
         <p class="weird">Fun Fact!..cloroform tastes sweet</p>
         <img class="img-face" src="5.jpg" alt="face photo"> 
     </div>
-    
+    <div>
+    <img class="map" src="palwave.gif">
+        
+    </div>
             <p class="details">🇮🇷 PRO PALESTINE 🇵🇸</p>
         <img class="dancing-lain2" src="lain-dance.gif">
 
         <div class="us-container">
-            <img src="0.jpg" alt="tank scene">
-        </div>
-             
-        <div class="poetry-section">
-            <p>من يسكن البحر ويحبه الناس ؟</p>
-            <p>Fav poet: Al-mutanabbi</p>
-            <p>Fav anime: Terror In Resonance - Steins;Gate - Fate/Zero</p>
-        </div>
-
-        <a href="https://drive.google.com/file/d/1HptspirSiZEm72FEHe9VNGxFtXGfCHvP/view?usp=drivesdk" target="_blank" class="rd">
-            Codyslab Uranium Refining
-        </a>
-<div>
-        <iframe class="link" src="https://drive.google.com/file/d/1dr0kIdPkFjYexq18ikimSPYccLrdFj99/preview"></iframe>
-    </div>
-    <div class="lain-dancing">
-            <img class="img-lain1" src="lain-berry-nice.gif">
-            <img class="img-lain2" src="lain.gif">
+            <img class="img3" src="Palestine1.jpg">
+         
+            <img class="img1" src="0.jpg" alt="tank scene">
+            <img class="img2" src="Palestine3.jpeg">
         </div>
         
-        <a href="https://discord.com/users/1085987019194372188" target="_blank">
+        <div class="poetry-section">
+            <p>من يسكن البحر ويحبه الناس ؟</p>
+       </div> 
+       
+      <a href="https://al-azophi.github.io/Yappier-/Experment-6-sea.html" target="_blank" class="sea">
+            <button class="sea">البحر</button>
+        </a>
+             
+       <div class="poetry-section">    
+            <p>Fav poet: Al-mutanabbi</p>
+            <p>Fav anime: Terror In Resonance - Steins;Gate - Fate/Zero</p>
+            
+        </div>
+        <audio class="me" src="me.m4a" controls></audio>
+
+        <a href="https://drive.google.com/file/d/1HptspirSiZEm72FEHe9VNGxFtXGfCHvP/view?usp=drivesdk" target="_blank" class="rd">
+            Uranium Refining ~codyslab
+        </a>
+        
+        <a href="https://drive.google.com/file/d/1XZOjrtmytJ6sg0fx0n9dfUGyg6EV7lHt/view?usp=drivesdk" class="rd">RDX synthesis ~PrussianBlue
+        </a>
+         <a href="https://drive.google.com/file/d/1GlgZkw_ps7Q-yCV-6BSX_46wsIIYp8NI/view?usp=drivesdk" class="rd">TNT synthesis ~Apoptosis
+        </a>
+        <a href="https://drive.google.com/file/d/1D9DzGsk4zI63KJ0MxkU1LQ9XxpPLDI3C/view?usp=drivesdk" class="rd">ChloroAcetone synthesis ~NileRed
+        </a>
+<div>
+        <iframe class="link" src="3.mp4"></iframe>
+    </div>
+    <div class="gifs">
+            <img class="img-lain1" src="eren-eren-yeager.gif">
+            <img class="img-lain2" src="aot-eren.gif">
+        </div>
+       
+        
+        <a href="google.com" target="_blank">
             <img class="discord" src="discord.jpg">
         </a>
         
@@ -306,4 +433,4 @@
     document.querySelector('video').playbackRate = 0.5;
     </script>
 </body>
-</html>
+             </html>
