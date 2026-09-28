@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serial Experiments Ayash</title>
+    <title>البَحْر</title>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Bungee&family=Michroma&display=swap" rel="stylesheet">
        <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,37 +15,19 @@
     {
             box-sizing: border-box;
         }
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-            background-color: black;
-             
+        html, body {
+     marigin :0;
+     min-height:100vh;
+     background-image:url("mosque.jpg");
+     background-repeat: no-repeat;
+     background-size:cover;
+     background-attachment:fixed;
+     font-family:aref Ruqaa, serif;
+     
             
         }
 
-        /* Video Background Frame */
-        .video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-          
-        }
-
-        .video {
-            width: 95%;
-            height: 95%;
-            object-fit: cover;
-        }  
-           
+        
                    /* Responsive Main Content Wrapper */
         .main-wrapper {
             position: relative;
@@ -62,7 +44,7 @@
         }
         
         .quran {
-            color:gold;
+            color:rgb(242, 255, 219);
             font-size: clamp(1.1rem, 3.2vw, 1.7rem); 
             display: flex;
             flex-direction: column;            
@@ -74,7 +56,7 @@
         }
         
          .title {
-            color: rgb(163, 150, 238);
+            color: rgb(60, 128, 97);
             font-size: clamp(1.1rem, 3.2vw, 1.8rem); 
             display: flex;
             flex-direction: column;            
@@ -84,7 +66,7 @@
         }
                  
         .poetry-section {
-            color:orange;
+            color:rgb(242, 255, 219);
             font-size: clamp(1.1rem, 3.2vw, 1.8rem); 
             display: flex;
             flex-direction: column;            
@@ -95,7 +77,7 @@
         }
                 
  .title2 {
-            color: rgb(163, 150, 238);
+            color: rgb(60, 128, 97);
             font-size: clamp(1.1rem, 3.2vw, 1.8rem); 
             display: flex;
             flex-direction: column;            
@@ -114,13 +96,7 @@
      </style>
 </head>
 <body dir="rtl">
-    <div class="video-container">
-        <video autoplay loop muted playsinline class="video">
-            <source src="4.mp4" type="video/mp4">
-        </video>
-    </div>
-
-
+    
     <div class="main-wrapper">
         <div class="quran">
         <p> 《
@@ -165,11 +141,8 @@
 جِبَالُهُمْ فِي الأَيْدِي مُفَرَّقَةٌ    وَأَمْرُهُمْ في الجِبَالِ مُجْتَمِعُ
 يَأْتُونَ مِنْ كُلِّ قَرْيَةٍ زُمَرَاً    إِلى طَرِيقٍ للهِ تَرْتَفِعُ
 تَضِيقُ بِالنَّاسِ الطُرْقُ إنْ كَثُرُوا   وَهَذِهِ بالزِّحَامِ تَتَّسِعُ</p>
+
 </div>
-
-
-     <script>
-    document.querySelector('video').playbackRate = 0.5;
-    </script>
+     
 </body>
                 </html>
