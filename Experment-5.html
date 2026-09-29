@@ -289,6 +289,7 @@
             animation-timing-function:linear;
             animation-iteration-count:infinite;
             margin-bottom:20px;
+            margin-top:100px;
             }
 @keyframes test{
  0%{ transform: rotate(0deg);}  
@@ -331,6 +332,16 @@ width:100px;
             margin: -10px 0;
             display: inline-block;
         }
+        .box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top:-70px;
+}
 
             
      </style>
@@ -428,22 +439,55 @@ width:100px;
         </a>
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         </a>
+        
 <div>
         <iframe class="link" src="3.mp4"></iframe>
     </div>
+    <div class="box">
+  <input type="text" id="name" placeholder="Name">
+  <textarea id="msg" placeholder="Message me :)"></textarea>
+  <button onclick="send()">Send</button>
+  <p id="out"></p>
+</div>
     <div class="gifs">
             <img class="img-lain1" src="eren-eren-yeager.gif">
             <img class="img-lain2" src="aot-eren.gif">
         </div>
        
         
-        <a href="https://discord.com/users/1085987019194372188" target="_blank">
+        <a href="https://discord.com/users/10859870191943721" target="_blank">
             <img class="discord" src="discord.jpg">
         </a>
         
 
     <script>
     document.querySelector('video').playbackRate = 0.5;
+    async function send() {
+  const url = "https://discord.com/api/webhooks/1554592000647499837/hSeKenyZU1Dzhn_Nd6l78lchEPkAomRBe5eQHlrRRNci96jXiBv3arQ_NlC5i13Sa_xq";
+  const name = document.getElementById("name").value;
+  const msg = document.getElementById("msg").value;
+  const out = document.getElementById("out");
+
+  const data = {
+    content: `**From:** ${name}\n**Message:** ${msg}`
+  };
+
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      out.innerText = "Sent!";
+    } else {
+      out.innerText = "Error!";
+    }
+  } catch (e) {
+    out.innerText = "Failed!";
+  }
+}
     </script>
 </body>
-            </html>
+    </html>
