@@ -1,523 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serial Experiment-5</title>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Bungee&family=Michroma&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Experment-Layer-2</title>
     <style>
-    {
-            box-sizing: border-box;
-        }
-        body, html {
+        html, body {
             margin: 0;
-            padding: 0;
             width: 100%;
             height: 100%;
-            overflow-x: hidden;
-            background-color: black;
-             font-family: "Aref Ruqaa", serif;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #dialogText {
+            color:Red;
 
         }
 
-        /* Video Background Frame */
-        .video-container {
-            position: fixed;
+        #dialogWrap {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-
-        }
-        .gallary {
-            width:350px;
-            height :200px;
-            border :none;
-            display :flex;
-            overflow-x: auto;
-            gap:0px;
-            margin-top:-10px;
-            margin-bottom:50px;
-
-            }
-            .gallary ::-webkit-scrollbar {
-               display :none;
-            }
-         .group {
-             display:flex;
-             align-items :center;
-             justify-content : center;
-             animation : spin 8s infinite linear;
-             gap: -80px;
-         }   
-        .pics {
-        flex : 0 0 4em;
-            height :1em;
-            padding:0em;
-            font-size:2rem;
-            border-radius:0.2em;
-            text-align :center;
-            align-content:center;
-            background:none;            
-            padding: 20px;
-                gap: 20px;
-                opacity: 0.9;
-
-        }
-        @keyframes spin {
-            from {translate:0;}
-            to {translate: -100%}
+            display: table;
+            background-image:url("bg6.jpg");
+     background-repeat: no-repeat;
+     background-size:cover;
+     background-attachment:fixed;
+     font-family:aref Ruqaa, serif;
         }
 
-
-        .video {
-            width: 95%;
-            height: 95%;
-            object-fit: cover;
-        }  
-
-                   /* Responsive Main Content Wrapper */
-        .main-wrapper {
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            gap: 15px; /* Safely space elements vertically without breaking */
+        #dialogWrapCell {
+            display: table-cell;
             text-align: center;
+            vertical-align: middle;
         }
 
-        /* Typography Styling */
-            .qrn {
-            color: orange;
-            font-size: clamp(1.4rem, 4.2vw, 2.3rem); 
-            margin-top:15px;
-            margin-bottom:50px;
-            white-space: nowrap;
-            font-family: "Noto Nastaliq Urdu", serif;
-
+        #mainDialog {
+            max-width: 350px;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color:white;
+            overflow: hidden;
+            text-align: left;
         }
-
-        .hi {
-            color: white;
-            font-size: clamp(1.4rem, 4vw, 2.5rem);
-            margin: 5px 0;
+        #mainDialog > * {
+            padding: 15px 30px;
         }
-
-        .who {
-            color: orange;
-            font-size: clamp(0.95rem, 3vw, 1.75rem); 
-            margin: 0;
+        #passArea {
+            padding: 2px 30px;
+            background-color: white;
         }
-
-        /* Chemistry Images Grid Setup */
-        .hobby-grid {
-            display: flex;
-            justify-content: center;
-            transform:translate(-50,-50);
-            align-items: flex-end;
-            gap:20px ; 
-            width:clamp(300px, 60%, 500px);
-            max-width: 500px;
-            margin: 15px 0;
-
+        #passArea > * {
+            margin: 5px auto;
         }
-
-        .hobby-grid img {
-            opacity: 0.8;
-            height: auto;
-            border-radius:10px;
-        }
-
-        .img-chem1 { width: 23.5%; aspect-ratio: 1604/3025; }
-        .img-chem2 { width: 35%; aspect-ratio: 1791/2276; }
-        .img-chem3 { width: 32%; aspect-ratio: 2523/3547; }
-
-
-
-        /* Buttons & Link Formatting */
-        .lain {
-            background-color: transparent;
-            border:2px solid white;
-            border-radius: 100px;
-            color: red;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            padding: 8px 12px;
-            cursor: pointer;            
-             font-family: 'DotGothic16', sans-serif;
-            transition: 0.2s;
-        }
-        .weird {
-            color: orange;
-            font-size: clamp(1rem, 3.5vw, 2rem); 
-            margin: 2px 0;
-        }
-        .row-details {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom:50px;
+        #pass {
             width: 100%;
-            max-width: 600px;
-        }
-
-        .details {
-            color: rgb(0, 255, 119);
-            font-size: clamp(1.2rem, 3.8vw, 2.2rem); 
-            margin: 0;
-        }
-
-        .img-face {
-            width: 60px;
-            aspect-ratio: 760/424;
-            object-fit: cover;
-        }
-
-        /* War Photo Container */
-        .us-container {
-            display: flex;
-            justify-content: center;
-            transform:translate(-50,-50);
-            align-items: flex-end;
-            gap:20px ; 
-            width:clamp(300px, 60%, 500px);
-            max-width: 500px;
-            margin: 15px 0;
+            height: 20px;
+            font-size: 30px;
 
         }
-        .us-container img {
-            opacity: 0.8;
-            height: auto;
-            border-radius:10px;
+
+        #messageWrapper {
+            float: left;
+            vertical-align: middle;
+            line-height: 30px;
         }
-        .img2 { width: 20%; aspect-ratio: 238/313; }
-        .img1 { width: 40%; aspect-ratio: 588/390; }
-        .img3 { width: 40%; aspect-ratio: 1024/683; }
 
-        /* Poetry & Anime Sections */
-        .poetry-section {
-            color: rgb(163, 150, 238);
-            font-size: clamp(1.1rem, 3.2vw, 1.8rem); 
-            display: flex;
-            flex-direction: column;            
-            gap: 0px;
-            margin:10px 10px;
-            max-width: 700px;
-            font-family: "Aref Ruqaa", serif;
-
+        .notifyText {
+            display: none;
         }
-        .poetry-section p { margin: 0; }
 
-        .rd {
+        #invalidPass {
             color: red;
-            font-size: clamp(1.3rem, 3.5vw, 2.2rem);
-            text-decoration: underline;
-            margin: 10px 0;
-            display: inline-block;
         }
 
-
-        .link {
-            width:50%;  
-            aspect-ratio: 496/496;               
-            border: none;
-            margin-top: 10px;
-            margin-bottom: 70px;
+        #success {
+            color: green;
         }
 
-               @keyframes flicker {
-            0%, 100% { opacity: 0.45; color: red; }
-            40% { opacity: 0.3; color: red; }
-            60% { opacity: 0.4; color: red; }
-            80% { opacity: 0.2; color: red; }
-        } 
-        .gifs {
-        position :absolute;
-        bottom:20px;
-            display:flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap:clamp(35%, 40%, 55%); 
-           width: 90%;
-            margin: 3% 0;
-             }
-      .gifs img {
-            opacity: 0.8;
-            height: auto;
-            border-radius:5px;
-        }
-
-        .img-lain2 { width: 25%; aspect-ratio: auto; }
-        .img-lain1 { width: 25%; aspect-ratio: auto; }
-
-        .dancing-lain2 {
-            position : fixed; 
-            top:68%;
-            z-index : 10;
-            left:70%;
-            opacity:0.6;
-            aspect-ratio: auto;
-            width:100px;
-            margin-right:100px;
-        }
-
-        .discord {
-            position:relative;
-            bottom:0%;
-            right:0%;
-            aspect-ratio: auto;
-            width:10%;
-            border-radius:250px;
-            animation-name:test;
-            animation-duration:4s;
-            animation-timing-function:linear;
-            animation-iteration-count:infinite;
-            margin-bottom:20px;
-            margin-top:100px;
-            }
-@keyframes test{
- 0%{ transform: rotate(0deg);}  
- 20%{ transform: rotate(72deg);} 
- 40%{ transform: rotate(144deg);}   
- 60%{ transform: rotate(216deg);}  
- 80%{ transform: rotate(288deg);} 
- 100%{ transform: rotate(360deg);}       
-}           
-      .me {
-          width:30%;
-          height:35px;  
-        }
-         .sea {
-            background-color: transparent;  
-            border-radius: 50px;
-            color: cyan;
-            font-size: clamp(1rem, 5vw, 1.5rem);
-            padding: 8px 12px;
-            cursor: pointer;            
-            font-family: "Aref Ruqaa", serif;
-            transition: 0.2s;
-            margin-top:-15px;
-        }
-            .Cat1 { width: 34%; aspect-ratio: 820/1440; }
-        .Cat2 { width: 51%; aspect-ratio: 1370/1600; }
-        .Cat3 { width: 60%; aspect-ratio: 1583/1600; }
-           .Cat4 { width: 60%; aspect-ratio: 1528/1528; }
-        .Cat5 { width: 60%; aspect-ratio: 1528/1528; }
-        .Cat6 { width: 60%; aspect-ratio: 1528/1528; } 
-
-.map {
-aspect-ratio: auto;
-width:100px;    
-}
-.rde {
-            color: white;
-            font-size: clamp(0.9rem, 3.5vw, 1.5rem);
-            text-decoration:none;
-            margin: -10px 0;
-            display: inline-block;
-        }
-        .box {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top:-70px;
-}
-.box input, 
-        .box textarea {
-            background-color:; 
-            color:rgb(163, 150, 238);             
-            border:;
-            border-radius:;
-            padding:;
-            font-family:;
-        }
-
-      
-        .box input::placeholder, 
-        .box textarea::placeholder {
-            color: #888;             
-        }
-
-        
-        .box button {
-            background-color:;  
-            color:rgb(163, 150, 238);             
-            border:;
-            padding:;
-            border-radius:;
+        #submitPass {
+            font-size: 15px;
+            border-radius: 5px;
+            color:green;
+            border:none;
+            float: right;
             cursor: pointer;
-            font-family:;
-            transition: 0.2s;
+
         }
-       
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-
-     </style>
-</head>
-<body>
-
-    <div class="video-container">
-        <video autoplay loop muted playsinline class="video">
-            <source src="4.mp4" type="video/mp4">
-        </video>
+         .error {
+            display: none;
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">Knowledge is a weapon. Do you have the key?</div>
+                <div id="passArea">
+                    <p id="passwordPrompt">Password</p>
+                    <input id="pass" type="password" name="pass" autofocus>
+                    <div>
+                        <span id="messageWrapper">
+                            <span id="invalidPass" class="error">Wrong password, Baka!.</span>
+                            <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                            <span id="success" class="notifyText">Success!</span>
+                            &nbsp;
+                        </span>
+                        <button id="submitPass" type="button">Submit</button>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
+                </div>
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="main-wrapper">
-
-        <p class="qrn">《وَٱلنَّجۡمِ إِذَا هَوَىٰ مَا ضَلَّ صَاحِبُكُمۡ وَمَا غَوَىٰ》</p>
-
-        <h3 class="hi">hiii...i'm Mahmoud</h3>
-        <p class="who">nature🌊 | hv⚡ | chemical synthesis😇 | Coding🤓</p>
-
-        <div class="hobby-grid">
-            <img class="img-chem1" src="2.jpg" alt="vial 1">
-            <img class="img-chem2" src="1.jpg" alt="vial 2">
-            <img class="img-chem3" src="3.jpg" alt="vial 3">
-        </div>
-        <div class="gallary">
-        <div class="group">
-        <div class="pics"><img class="Cat1" src="Cat1.jpg"></div>  
-        <div class="pics"><img class="Cat2" src="Cat2.jpg"></div>  
-        <div class="pics"><img class="Cat3" src="Cat3.jpg"></div>
-        <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
-        <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
-        <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
-
-        </div>  
-         <div aria-hidden class="group">
-        <div class="pics"><img class="Cat1" src="Cat1.jpg"></div>  
-        <div class="pics"><img class="Cat2" src="Cat2.jpg"></div>  
-        <div class="pics"><img class="Cat3" src="Cat3.jpg"></div>
-        <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
-        <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
-        <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
-
-        </div>      
-        </div>
-<div>
-        <a href="https://youtu.be/shqqUyhbWoI?si=NYHdLpUCL3IP41Ml" target="_blank">
-            <button class="lain">Connect</button>
-        </a>
-        </div>
-         <div class="row-details">   
-        <p class="weird">Fun Fact!..cloroform tastes sweet</p>
-        <img class="img-face" src="5.jpg" alt="face photo"> 
-    </div>
-    <div>
-    <img class="map" src="palwave.gif">
-
-    </div>
-            <p class="details">🇮🇷 PRO PALESTINE 🇵🇸</p>
-        <img class="dancing-lain2" src="lain-dance.gif">
-
-        <div class="us-container">
-            <img class="img3" src="Palestine1.jpg">
-
-            <img class="img1" src="0.jpg" alt="tank scene">
-            <img class="img2" src="Palestine3.jpeg">
-        </div>
-
-        <div class="poetry-section">
-            <p>من يسكن البحر ويحبه الناس ؟</p>
-       </div> 
-
-      <a href="https://al-azophi.github.io/Yappier-/Experment-6-sea.html" target="_blank" class="sea">
-            <button class="sea">البحر</button>
-        </a>
-
-       <div class="poetry-section">    
-            <p>Fav poet: Al-mutanabbi</p>
-            <p>Fav anime: Terror In Resonance - Steins;Gate - Attack On Titan</p>
-
-        </div>
-        <audio class="me" src="me.m4a" controls></audio>
-
-        <a href="https://al-azophi.github.io/Yappier-/Experment-5-library.html" target="_blank" class="rd">
-            The House of Wisdom
-        </a>
-        <a class="rde">
-            -Uranium Refining ~codyslab
-        </a>
-
-        <a class="rde">-RDX synthesis ~PrussianBlue
-        </a>
-         <a class="rde">-TNT synthesis ~Apoptosis
-        </a>
-        <a class="rde">-ChloroAcetone synthesis ~NileRed
-        </a>
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        </a>
-
-<div>
-        <iframe class="link" src="3.mp4"></iframe>
-    </div>
-    <div class="box">
-  <input type="text" id="name" placeholder="Name">
-  <textarea id="msg" placeholder="Message me :)"></textarea>
-  <button onclick="send()">Send</button>
-  <p id="out"></p>
-</div>
-    <div class="gifs">
-            <img class="img-lain1" src="eren-eren-yeager.gif">
-            <img class="img-lain2" src="aot-eren.gif">
-        </div>
-
-
-        <a href="https://discord.com" target="_blank">
-            <img class="discord" src="discord.jpg">
-        </a>
-
 
     <script>
-    document.querySelector('video').playbackRate = 0.5;
-    async function send() {
-  const url = "https://discord.com/api/webhooks/1554592000647499837/hSeKenyZU1Dzhn_Nd6l78lchEPkAomRBe5eQHlrRRNci96jXiBv3arQ_NlC5i13Sa_xq";
-  const name = document.getElementById("name").value;
-  const msg = document.getElementById("msg").value;
-  const out = document.getElementById("out");
+    (function() {
+        var pl = "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";
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var trycatcherror = document.getElementById('trycatcherror');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        // Sanity checks
 
-  const data = {
-    content: `**From:** ${name}\n**Message:** ${msg}`
-  };
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+            return;
+        }
 
-  try {
-    const res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
+        if (!isSecureContext) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#securecontext").style.display = "block";
+            return;
+        }
 
-    if (res.ok) {
-      out.innerText = "Sent!";
-      out.style.color ="rgb(0, 255, 119)";
-    } else {
-      out.innerText = "Error!";
-    }
-  } catch (e) {
-    out.innerText = "Failed!";
-    out.style.color ="red";
-  }
-}
+        if (!crypto.subtle) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#nocrypto").style.display = "block";
+            return;
+        }
+        
+        function str2ab(str) {
+            var ustr = atob(str);
+            var buf = new ArrayBuffer(ustr.length);
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=ustr.length; i < strLen; i++) {
+                bufView[i] = ustr.charCodeAt(i);
+            }
+            return bufView;
+        }
+
+        async function deriveKey(salt, password) {
+            const encoder = new TextEncoder()
+            const baseKey = await crypto.subtle.importKey(
+                'raw',
+                encoder.encode(password),
+                'PBKDF2',
+                false,
+                ['deriveKey'],
+            )
+            return await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-GCM', length: 256 },
+                true,
+                ['decrypt'],
+            )
+        }
+        
+        async function doSubmit(evt) {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+
+            let iv, ciphertext, key;
+            
+            try {
+                var unencodedPl = str2ab(pl);
+
+                const salt = unencodedPl.slice(0, 32)
+                iv = unencodedPl.slice(32, 32 + 16)
+                ciphertext = unencodedPl.slice(32 + 16)
+
+                key = await deriveKey(salt, passEl.value);
+            } catch (e) {
+                trycatcherror.style.display = "inline";
+                console.error(e);
+                return;
+            }
+
+            try {
+                const decryptedArray = new Uint8Array(
+                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
+                );
+
+                let decrypted = new TextDecoder().decode(decryptedArray);
+
+                if (decrypted === "") throw "No data returned";
+
+                const basestr = '<base href="." target="_top">';
+                const anchorfixstr = `
+                    <script>
+                        Array.from(document.links).forEach((anchor) => {
+                            const href = anchor.getAttribute("href");
+                            if (href.startsWith("#")) {
+                                anchor.addEventListener("click", function(e) {
+                                    e.preventDefault();
+                                    const targetId = this.getAttribute("href").substring(1);
+                                    const targetEl = document.getElementById(targetId);
+                                    targetEl.scrollIntoView();
+                                });
+                            }
+                        });
+                    <\/script>
+                `;
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
+                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
+                else decrypted = basestr + decrypted;
+
+                // Fix fragment links
+                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
+                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
+                else decrypted = decrypted + anchorfixstr;
+                
+                contentFrame.srcdoc = decrypted;
+                
+                successEl.style.display = "inline";
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+                submitPass.disabled = false;
+                passEl.disabled = false;
+                console.error(e);
+                return;
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+    })();
     </script>
-</body>
-  </html>
+  </body>
+</html>
