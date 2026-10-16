@@ -24,7 +24,7 @@
             overflow-x: hidden;
             background-color: black;
              font-family: "Aref Ruqaa", serif;
-            
+
         }
 
         /* Video Background Frame */
@@ -38,7 +38,7 @@
             justify-content: center;
             align-items: center;
             z-index: 1;
-          
+
         }
         .gallary {
             width:350px;
@@ -49,7 +49,7 @@
             gap:0px;
             margin-top:-10px;
             margin-bottom:50px;
-           
+
             }
             .gallary ::-webkit-scrollbar {
                display :none;
@@ -73,20 +73,20 @@
             padding: 20px;
                 gap: 20px;
                 opacity: 0.9;
-            
+
         }
         @keyframes spin {
             from {translate:0;}
             to {translate: -100%}
         }
-             
-         
+
+
         .video {
             width: 95%;
             height: 95%;
             object-fit: cover;
         }  
-           
+
                    /* Responsive Main Content Wrapper */
         .main-wrapper {
             position: relative;
@@ -110,7 +110,7 @@
             margin-bottom:50px;
             white-space: nowrap;
             font-family: "Noto Nastaliq Urdu", serif;
-     
+
         }
 
         .hi {
@@ -135,7 +135,7 @@
             width:clamp(300px, 60%, 500px);
             max-width: 500px;
             margin: 15px 0;
-            
+
         }
 
         .hobby-grid img {
@@ -147,8 +147,8 @@
         .img-chem1 { width: 23.5%; aspect-ratio: 1604/3025; }
         .img-chem2 { width: 35%; aspect-ratio: 1791/2276; }
         .img-chem3 { width: 32%; aspect-ratio: 2523/3547; }
-        
-                    
+
+
 
         /* Buttons & Link Formatting */
         .lain {
@@ -199,7 +199,7 @@
             width:clamp(300px, 60%, 500px);
             max-width: 500px;
             margin: 15px 0;
-        
+
         }
         .us-container img {
             opacity: 0.8;
@@ -209,7 +209,7 @@
         .img2 { width: 20%; aspect-ratio: 238/313; }
         .img1 { width: 40%; aspect-ratio: 588/390; }
         .img3 { width: 40%; aspect-ratio: 1024/683; }
-          
+
         /* Poetry & Anime Sections */
         .poetry-section {
             color: rgb(163, 150, 238);
@@ -220,7 +220,7 @@
             margin:10px 10px;
             max-width: 700px;
             font-family: "Aref Ruqaa", serif;
-            
+
         }
         .poetry-section p { margin: 0; }
 
@@ -232,7 +232,7 @@
             display: inline-block;
         }
 
-        
+
         .link {
             width:50%;  
             aspect-ratio: 496/496;               
@@ -240,7 +240,7 @@
             margin-top: 10px;
             margin-bottom: 70px;
         }
-        
+
                @keyframes flicker {
             0%, 100% { opacity: 0.45; color: red; }
             40% { opacity: 0.3; color: red; }
@@ -265,7 +265,7 @@
 
         .img-lain2 { width: 25%; aspect-ratio: auto; }
         .img-lain1 { width: 25%; aspect-ratio: auto; }
-        
+
         .dancing-lain2 {
             position : fixed; 
             top:68%;
@@ -276,7 +276,7 @@
             width:100px;
             margin-right:100px;
         }
-        
+
         .discord {
             position:relative;
             bottom:0%;
@@ -320,7 +320,7 @@
            .Cat4 { width: 60%; aspect-ratio: 1528/1528; }
         .Cat5 { width: 60%; aspect-ratio: 1528/1528; }
         .Cat6 { width: 60%; aspect-ratio: 1528/1528; } 
-    
+
 .map {
 aspect-ratio: auto;
 width:100px;    
@@ -342,8 +342,36 @@ width:100px;
   border-radius: 8px;
   margin-top:-70px;
 }
+.box input, 
+        .box textarea {
+            background-color:; 
+            color:rgb(163, 150, 238);             
+            border:;
+            border-radius:;
+            padding:;
+            font-family:;
+        }
 
-            
+      
+        .box input::placeholder, 
+        .box textarea::placeholder {
+            color: #888;             
+        }
+
+        
+        .box button {
+            background-color:;  
+            color:rgb(163, 150, 238);             
+            border:;
+            padding:;
+            border-radius:;
+            cursor: pointer;
+            font-family:;
+            transition: 0.2s;
+        }
+       
+
+
      </style>
 </head>
 <body>
@@ -355,12 +383,12 @@ width:100px;
     </div>
 
     <div class="main-wrapper">
-     
+
         <p class="qrn">《وَٱلنَّجۡمِ إِذَا هَوَىٰ مَا ضَلَّ صَاحِبُكُمۡ وَمَا غَوَىٰ》</p>
-        
+
         <h3 class="hi">hiii...i'm Mahmoud</h3>
         <p class="who">nature🌊 | hv⚡ | chemical synthesis😇 | Coding🤓</p>
-        
+
         <div class="hobby-grid">
             <img class="img-chem1" src="2.jpg" alt="vial 1">
             <img class="img-chem2" src="1.jpg" alt="vial 2">
@@ -374,7 +402,7 @@ width:100px;
         <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
         <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
         <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
-            
+
         </div>  
          <div aria-hidden class="group">
         <div class="pics"><img class="Cat1" src="Cat1.jpg"></div>  
@@ -383,7 +411,7 @@ width:100px;
         <div class="pics"><img class="Cat4" src="Cat4.jpg"></div>  
         <div class="pics"><img class="Cat5" src="Cat5.jpg"></div>  
         <div class="pics"><img class="Cat6" src="Cat6.jpg"></div>    
-            
+
         </div>      
         </div>
 <div>
@@ -397,30 +425,30 @@ width:100px;
     </div>
     <div>
     <img class="map" src="palwave.gif">
-        
+
     </div>
             <p class="details">🇮🇷 PRO PALESTINE 🇵🇸</p>
         <img class="dancing-lain2" src="lain-dance.gif">
 
         <div class="us-container">
             <img class="img3" src="Palestine1.jpg">
-         
+
             <img class="img1" src="0.jpg" alt="tank scene">
             <img class="img2" src="Palestine3.jpeg">
         </div>
-        
+
         <div class="poetry-section">
             <p>من يسكن البحر ويحبه الناس ؟</p>
        </div> 
-       
+
       <a href="https://al-azophi.github.io/Yappier-/Experment-6-sea.html" target="_blank" class="sea">
             <button class="sea">البحر</button>
         </a>
-             
+
        <div class="poetry-section">    
             <p>Fav poet: Al-mutanabbi</p>
             <p>Fav anime: Terror In Resonance - Steins;Gate - Attack On Titan</p>
-            
+
         </div>
         <audio class="me" src="me.m4a" controls></audio>
 
@@ -430,7 +458,7 @@ width:100px;
         <a class="rde">
             -Uranium Refining ~codyslab
         </a>
-        
+
         <a class="rde">-RDX synthesis ~PrussianBlue
         </a>
          <a class="rde">-TNT synthesis ~Apoptosis
@@ -439,7 +467,7 @@ width:100px;
         </a>
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         </a>
-        
+
 <div>
         <iframe class="link" src="3.mp4"></iframe>
     </div>
@@ -453,12 +481,12 @@ width:100px;
             <img class="img-lain1" src="eren-eren-yeager.gif">
             <img class="img-lain2" src="aot-eren.gif">
         </div>
-       
-        
+
+
         <a href="https://discord.com" target="_blank">
             <img class="discord" src="discord.jpg">
         </a>
-        
+
 
     <script>
     document.querySelector('video').playbackRate = 0.5;
@@ -481,11 +509,13 @@ width:100px;
 
     if (res.ok) {
       out.innerText = "Sent!";
+      out.style.color ="rgb(0, 255, 119)";
     } else {
       out.innerText = "Error!";
     }
   } catch (e) {
     out.innerText = "Failed!";
+    out.style.color ="red";
   }
 }
     </script>
