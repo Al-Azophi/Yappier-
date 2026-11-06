@@ -248,13 +248,15 @@
             80% { opacity: 0.2; color: red; }
         } 
         .gifs {
-        position :absolute
+        position:relative;
             display:flex;
             justify-content: center;
             align-items: flex-end;
             gap:clamp(30%, 40%, 50%); 
-           width: 100%;
-            margin: 3% 0;
+           width: 70%;
+           margin-bottom:-55px;
+           margin-top:40px;
+            
              }
       .gifs img {
             opacity: 0.8;
@@ -287,8 +289,8 @@
             animation-duration:4s;
             animation-timing-function:linear;
             animation-iteration-count:infinite;
-            margin-bottom:20px;
-            margin-top:100px;
+            margin-bottom:30px;
+          
             }
 @keyframes test{
  0%{ transform: rotate(0deg);}  
@@ -340,6 +342,7 @@ width:100px;
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-top:-70px;
+
 }
 .box input, 
         .box textarea {
@@ -470,7 +473,7 @@ width:100px;
         </a>
 
 <div>
-        <iframe class="link" src="32.mp4"></iframe>
+        <iframe class="link" src="3.mp4"></iframe>
     </div>
     <div class="box">
   <input type="text" id="name" placeholder="Name">
