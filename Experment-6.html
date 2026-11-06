@@ -1,47 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"  /> 
-    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
-<script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <meta charset="UTF-8">
+    
+    <script>
+        window.location.replace("https://Ayash94.pythonanywhere.com");
+    </script>
+    
+    
+    <meta http-equiv="refresh" content="0;url=https://Ayash94.pythonanywhere.com">
 </head>
-<body>
-   <py-script> 
-    from flask import Flask, request, redirect
-from datetime import datetime
-import requests
 
-
-app = Flask(__name__)
-
-def send_ip(ip, date):
-    webhook_url = "https://discord.com/api/webhooks/1566759681525948508/fY4MSZCT4Hz7YnPh7anU2jZjq6nXaR2tBq-MvHBFz8jE_WSmt6-ushnrLy8wCkzvuPzC"
-    data = {
-        "content": "",
-        "title": "IP Logger"
-    }
-    data["embeds"] = [
-        {
-            "title": ip,
-            "description": date
-         }
-    ]
-    requests.post(webhook_url, json=data)
-
-@app.route("/")
-def index():
-    ip = request.environ.get("HTTP_X_FORWARDED_FOR", request.remote_addr)
-    date = datetime.today().strftime("%Y-%m-%d %H:%M:%S")
-
-    send_ip(ip, date)
-
-    return redirect("https://al-azophi.github.io/Yappier-/Experment-5-library.html")
-
-
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
-   </py-script>
-   
 </body>
-    </html>
+</html>
